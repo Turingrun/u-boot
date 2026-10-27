@@ -1,0 +1,24 @@
+if ROCKCHIP_RK3568
+
+config TARGET_EVB_RK3568
+	bool "EVB_RK3568"
+	select BOARD_LATE_INIT
+	help
+	  RK3568 EVB is a evaluation board for Rockchp RK3568.
+
+config TARGET_OK3568_C
+	bool "Forlinx OK3568-C"
+	select BOARD_LATE_INIT
+	help
+	  Support Forlinx OK3568-C board.
+
+config SYS_SOC
+	default "rockchip"
+
+config SYS_MALLOC_F_LEN
+	default 0x400
+
+source board/rockchip/evb_rk3568/Kconfig
+source board/forlinx/ok3568/Kconfig
+
+endif
